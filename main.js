@@ -47,29 +47,29 @@ async function initializeTrimbleConnect(){
     };
     console.log(mainMenuObject);
     // Updating the menu object.
-    workSpaceAPI.ui.setMenu(mainMenuObject);
-    // Updating the active submenu.
-    workSpaceAPI.ui.setActiveMenuItem("submenu_2_clicked");
+    workSpaceAPI.ui.setMenu(mainMenuObject);    
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('redirectButton');
 
-    button.addEventListener('click', () => {
-        // Open external link in a new tab
-        window.open('https://dev.virtuele.us', '_blank');        
+    button.addEventListener('click', () => {        
+        // Updating the active submenu.
+        workSpaceAPI.ui.setActiveMenuItem("submenu_1_clicked");
+        // // Open external link in a new tab
+        // window.open('https://dev.virtuele.us', '_blank');
     });
 
     // Optional: If you want to integrate with Trimble Connect UI API
-    if (window.TC && TC.UI) {
-        TC.UI.addCustomButton({
-            id: 'redirectButton',
-            label: 'Go to Virtuele Development',
-            onClick: () => {
-                window.open('https://dev.virtuele.us', '_blank');
-            }
-        });
-    }
+    // if (window.TC && TC.UI) {
+    //     TC.UI.addCustomButton({
+    //         id: 'redirectButton',
+    //         label: 'Go to Virtuele Development',
+    //         onClick: () => {
+    //             window.open('https://dev.virtuele.us', '_blank');
+    //         }
+    //     });
+    // }
 });
 
 initializeTrimbleConnect();
