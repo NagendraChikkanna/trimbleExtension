@@ -18,8 +18,20 @@
             console.log(window);
             debugger;
             //window.location.href = 'Authorization.html';
-            window.open('https://dev.virtuele.us', '_blank');
+            //window.open('https://dev.virtuele.us', '_blank');
+            connectToTrimbleConnect();
         });
+        async function connectToTrimbleConnect() {
+            await TrimbleConnectWorkspace.connect().then(() => {
+                console.log("Connected to Trimble Connect Workspace");
+
+                const appInfo = TrimbleConnectWorkspace.getAppInfo();
+                const project = TrimbleConnectWorkspace.getProject();
+                
+                console.log("Extension ID:", appInfo.extensionId);
+                console.log("Project:", project);
+            });
+        }
     </script>
 </body>
 </html>
