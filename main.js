@@ -67,7 +67,8 @@ async function initializeTrimbleConnect(){
     };
     console.log("menu object", mainMenuObject);
     console.log("workSpaceAPI.ui", workSpaceAPI.ui);
-    console.log("workSpaceAPI.extensions", workSpaceAPI.extensions);
+    console.log("workSpaceAPI.extension", workSpaceAPI.extension);
+    console.log("workSpaceAPI", workSpaceAPI);
     // Updating the menu object.
     if (workSpaceAPI && workSpaceAPI.ui && workSpaceAPI.ui.setMenu) {
         workSpaceAPI.ui.setMenu(mainMenuObject);
