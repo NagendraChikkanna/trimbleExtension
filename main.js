@@ -65,6 +65,8 @@ async function initializeTrimbleConnect(){
             },
         ],
     };
+    let prj = await workSpaceAPI.project.getSettings();
+    console.log("project settings", prj);
     console.log("menu object", mainMenuObject);
     console.log("workSpaceAPI.ui", workSpaceAPI.ui);
     console.log("workSpaceAPI.project", workSpaceAPI.project.getSettings());
