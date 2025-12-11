@@ -3,8 +3,8 @@ let workSpaceAPI = null;
 async function initializeTrimbleConnect(){
     workSpaceAPI = await TrimbleConnectWorkspace.connect(window.parent,
         (event, args) => {
-            console.log(event);
-            console.log(args);
+            console.log("event:", event);
+            console.log("args", args);
             switch (event) {
                 case "extension.command":
                     //"Command executed by the user: args.data"
