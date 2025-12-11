@@ -69,9 +69,11 @@ async function initializeTrimbleConnect(){
     console.log("project settings", prj);
     console.log("menu object", mainMenuObject);
     console.log("workSpaceAPI.ui", workSpaceAPI.ui);
-    console.log("workSpaceAPI.project", workSpaceAPI.project.getSettings());
+    //console.log("workSpaceAPI.project", workSpaceAPI.project.getSettings());
     console.log("workSpaceAPI.extension", workSpaceAPI.extension);
-    console.log("workSpaceAPI.extension.goToSettings().", workSpaceAPI.extension.goToSettings());
+    // console.log("workSpaceAPI.extension.goToSettings().", workSpaceAPI.extension.goToSettings());
+    let extSettings = await workSpaceAPI.extension.goToSettings();
+    console.log("workSpaceAPI.extension.goToSettings()", extSettings);
     console.log("workSpaceAPI.extension.id", workSpaceAPI.extension.id);
     console.log("workSpaceAPI.manifest.id", workSpaceAPI.manifest.id);
     console.log("workSpaceAPI", workSpaceAPI);
